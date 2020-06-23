@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2FFBD824A0123A002900D3 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2FFBD724A01239002900D3 /* UIViewController+alert.swift */; };
+		3EB0FDB824A1814500A92C4A /* receiveKindness.py in Resources */ = {isa = PBXBuildFile; fileRef = 3EB0FDB724A1814500A92C4A /* receiveKindness.py */; };
+		3EB0FDBB24A181F100A92C4A /* receiveKindness.ino in Resources */ = {isa = PBXBuildFile; fileRef = 3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */; };
+		3EEBEF3F24A10CEF007E2749 /* UIView+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF3E24A10CEF007E2749 /* UIView+properties.swift */; };
+		3EEBEF4124A112B3007E2749 /* KindUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF4024A112B3007E2749 /* KindUser.swift */; };
+		3EEBEF4324A1153C007E2749 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF4224A1153C007E2749 /* ProfileViewController.swift */; };
+		3EEBEF4524A11A1E007E2749 /* CommunityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF4424A11A1E007E2749 /* CommunityListViewController.swift */; };
+		3EEBEF4724A13788007E2749 /* KindUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF4624A13788007E2749 /* KindUsers.swift */; };
 		3EF00D7C24A0052D000BE3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF00D7B24A0052D000BE3E2 /* AppDelegate.swift */; };
 		3EF00D7E24A0052D000BE3E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF00D7D24A0052D000BE3E2 /* SceneDelegate.swift */; };
-		3EF00D8024A0052D000BE3E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF00D7F24A0052D000BE3E2 /* ViewController.swift */; };
+		3EF00D8024A0052D000BE3E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF00D7F24A0052D000BE3E2 /* LoginViewController.swift */; };
 		3EF00D8324A0052D000BE3E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF00D8124A0052D000BE3E2 /* Main.storyboard */; };
 		3EF00D8524A0052E000BE3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EF00D8424A0052E000BE3E2 /* Assets.xcassets */; };
 		3EF00D8824A0052E000BE3E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF00D8624A0052E000BE3E2 /* LaunchScreen.storyboard */; };
+		3EF00D9024A0056E000BE3E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF00D8F24A0056E000BE3E2 /* GoogleService-Info.plist */; };
+		AFB377A6F696A4A68AB04CC6 /* Pods_Kindness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D67544A532F2514FCFF6A3B /* Pods_Kindness.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E2FFBD724A01239002900D3 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
+		3EB0FDB724A1814500A92C4A /* receiveKindness.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = receiveKindness.py; sourceTree = "<group>"; };
+		3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = receiveKindness.ino; sourceTree = "<group>"; };
+		3EEBEF3E24A10CEF007E2749 /* UIView+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+properties.swift"; sourceTree = "<group>"; };
+		3EEBEF4024A112B3007E2749 /* KindUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindUser.swift; sourceTree = "<group>"; };
+		3EEBEF4224A1153C007E2749 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3EEBEF4424A11A1E007E2749 /* CommunityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityListViewController.swift; sourceTree = "<group>"; };
+		3EEBEF4624A13788007E2749 /* KindUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindUsers.swift; sourceTree = "<group>"; };
 		3EF00D7824A0052D000BE3E2 /* Kindness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kindness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF00D7B24A0052D000BE3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EF00D7D24A0052D000BE3E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3EF00D7F24A0052D000BE3E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EF00D7F24A0052D000BE3E2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3EF00D8224A0052D000BE3E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EF00D8424A0052E000BE3E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EF00D8724A0052E000BE3E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EF00D8924A0052E000BE3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EF00D8F24A0056E000BE3E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7B8A3ADB7B38678CC7A87328 /* Pods-Kindness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kindness.release.xcconfig"; path = "Target Support Files/Pods-Kindness/Pods-Kindness.release.xcconfig"; sourceTree = "<group>"; };
+		8D67544A532F2514FCFF6A3B /* Pods_Kindness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kindness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5ECB874B170904A29786FE /* Pods-Kindness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kindness.debug.xcconfig"; path = "Target Support Files/Pods-Kindness/Pods-Kindness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB377A6F696A4A68AB04CC6 /* Pods_Kindness.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EB846EB5123F931CD963E9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D67544A532F2514FCFF6A3B /* Pods_Kindness.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3EF00D6F24A0052D000BE3E2 = {
 			isa = PBXGroup;
 			children = (
 				3EF00D7A24A0052D000BE3E2 /* Kindness */,
 				3EF00D7924A0052D000BE3E2 /* Products */,
+				9607D803E01494001437D7B3 /* Pods */,
+				1EB846EB5123F931CD963E9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +91,31 @@
 			children = (
 				3EF00D7B24A0052D000BE3E2 /* AppDelegate.swift */,
 				3EF00D7D24A0052D000BE3E2 /* SceneDelegate.swift */,
-				3EF00D7F24A0052D000BE3E2 /* ViewController.swift */,
+				3EEBEF4024A112B3007E2749 /* KindUser.swift */,
+				3EEBEF4624A13788007E2749 /* KindUsers.swift */,
+				3EF00D7F24A0052D000BE3E2 /* LoginViewController.swift */,
+				3EEBEF4424A11A1E007E2749 /* CommunityListViewController.swift */,
+				3EEBEF4224A1153C007E2749 /* ProfileViewController.swift */,
+				3E2FFBD724A01239002900D3 /* UIViewController+alert.swift */,
+				3EEBEF3E24A10CEF007E2749 /* UIView+properties.swift */,
 				3EF00D8124A0052D000BE3E2 /* Main.storyboard */,
 				3EF00D8424A0052E000BE3E2 /* Assets.xcassets */,
 				3EF00D8624A0052E000BE3E2 /* LaunchScreen.storyboard */,
 				3EF00D8924A0052E000BE3E2 /* Info.plist */,
+				3EF00D8F24A0056E000BE3E2 /* GoogleService-Info.plist */,
+				3EB0FDB724A1814500A92C4A /* receiveKindness.py */,
+				3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */,
 			);
 			path = Kindness;
+			sourceTree = "<group>";
+		};
+		9607D803E01494001437D7B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF5ECB874B170904A29786FE /* Pods-Kindness.debug.xcconfig */,
+				7B8A3ADB7B38678CC7A87328 /* Pods-Kindness.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EF00D8C24A0052E000BE3E2 /* Build configuration list for PBXNativeTarget "Kindness" */;
 			buildPhases = (
+				52ACACF3624A017C9ACE4BFA /* [CP] Check Pods Manifest.lock */,
 				3EF00D7424A0052D000BE3E2 /* Sources */,
 				3EF00D7524A0052D000BE3E2 /* Frameworks */,
 				3EF00D7624A0052D000BE3E2 /* Resources */,
+				FC1755C7B986552E1A71CB8C /* [CP] Embed Pods Frameworks */,
+				238EB39AEA3E7DF4DAC96D9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,22 +179,90 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB0FDB824A1814500A92C4A /* receiveKindness.py in Resources */,
 				3EF00D8824A0052E000BE3E2 /* LaunchScreen.storyboard in Resources */,
+				3EF00D9024A0056E000BE3E2 /* GoogleService-Info.plist in Resources */,
 				3EF00D8524A0052E000BE3E2 /* Assets.xcassets in Resources */,
 				3EF00D8324A0052D000BE3E2 /* Main.storyboard in Resources */,
+				3EB0FDBB24A181F100A92C4A /* receiveKindness.ino in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		238EB39AEA3E7DF4DAC96D9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kindness/Pods-Kindness-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kindness/Pods-Kindness-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kindness/Pods-Kindness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52ACACF3624A017C9ACE4BFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kindness-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC1755C7B986552E1A71CB8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kindness/Pods-Kindness-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kindness/Pods-Kindness-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kindness/Pods-Kindness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EF00D7424A0052D000BE3E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EF00D8024A0052D000BE3E2 /* ViewController.swift in Sources */,
+				3EEBEF4324A1153C007E2749 /* ProfileViewController.swift in Sources */,
+				3EEBEF4124A112B3007E2749 /* KindUser.swift in Sources */,
+				3EEBEF3F24A10CEF007E2749 /* UIView+properties.swift in Sources */,
+				3EF00D8024A0052D000BE3E2 /* LoginViewController.swift in Sources */,
+				3EEBEF4724A13788007E2749 /* KindUsers.swift in Sources */,
+				3EEBEF4524A11A1E007E2749 /* CommunityListViewController.swift in Sources */,
 				3EF00D7C24A0052D000BE3E2 /* AppDelegate.swift in Sources */,
 				3EF00D7E24A0052D000BE3E2 /* SceneDelegate.swift in Sources */,
+				3E2FFBD824A0123A002900D3 /* UIViewController+alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +404,7 @@
 		};
 		3EF00D8D24A0052E000BE3E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF5ECB874B170904A29786FE /* Pods-Kindness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +423,7 @@
 		};
 		3EF00D8E24A0052E000BE3E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8A3ADB7B38678CC7A87328 /* Pods-Kindness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
