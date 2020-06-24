@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0B279024A2E5EF00E8E656 /* code_for_CPB.py in Resources */ = {isa = PBXBuildFile; fileRef = 3E0B278F24A2E5EF00E8E656 /* code_for_CPB.py */; };
 		3E2FFBD824A0123A002900D3 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2FFBD724A01239002900D3 /* UIViewController+alert.swift */; };
 		3EB0FDB824A1814500A92C4A /* receiveKindness.py in Resources */ = {isa = PBXBuildFile; fileRef = 3EB0FDB724A1814500A92C4A /* receiveKindness.py */; };
 		3EB0FDBB24A181F100A92C4A /* receiveKindness.ino in Resources */ = {isa = PBXBuildFile; fileRef = 3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */; };
+		3EE3473324A2883F00809AC6 /* findAndMessageBluefruit.py in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3473224A2883F00809AC6 /* findAndMessageBluefruit.py */; };
 		3EEBEF3F24A10CEF007E2749 /* UIView+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF3E24A10CEF007E2749 /* UIView+properties.swift */; };
 		3EEBEF4124A112B3007E2749 /* KindUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF4024A112B3007E2749 /* KindUser.swift */; };
 		3EEBEF4324A1153C007E2749 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEBEF4224A1153C007E2749 /* ProfileViewController.swift */; };
@@ -26,9 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E0B278F24A2E5EF00E8E656 /* code_for_CPB.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = code_for_CPB.py; sourceTree = "<group>"; };
 		3E2FFBD724A01239002900D3 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		3EB0FDB724A1814500A92C4A /* receiveKindness.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = receiveKindness.py; sourceTree = "<group>"; };
 		3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = receiveKindness.ino; sourceTree = "<group>"; };
+		3EE3473224A2883F00809AC6 /* findAndMessageBluefruit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = findAndMessageBluefruit.py; sourceTree = "<group>"; };
 		3EEBEF3E24A10CEF007E2749 /* UIView+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+properties.swift"; sourceTree = "<group>"; };
 		3EEBEF4024A112B3007E2749 /* KindUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindUser.swift; sourceTree = "<group>"; };
 		3EEBEF4224A1153C007E2749 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				3EF00D8924A0052E000BE3E2 /* Info.plist */,
 				3EF00D8F24A0056E000BE3E2 /* GoogleService-Info.plist */,
 				3EB0FDB724A1814500A92C4A /* receiveKindness.py */,
+				3EE3473224A2883F00809AC6 /* findAndMessageBluefruit.py */,
+				3E0B278F24A2E5EF00E8E656 /* code_for_CPB.py */,
 				3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */,
 			);
 			path = Kindness;
@@ -180,9 +186,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB0FDB824A1814500A92C4A /* receiveKindness.py in Resources */,
+				3E0B279024A2E5EF00E8E656 /* code_for_CPB.py in Resources */,
 				3EF00D8824A0052E000BE3E2 /* LaunchScreen.storyboard in Resources */,
 				3EF00D9024A0056E000BE3E2 /* GoogleService-Info.plist in Resources */,
 				3EF00D8524A0052E000BE3E2 /* Assets.xcassets in Resources */,
+				3EE3473324A2883F00809AC6 /* findAndMessageBluefruit.py in Resources */,
 				3EF00D8324A0052D000BE3E2 /* Main.storyboard in Resources */,
 				3EB0FDBB24A181F100A92C4A /* receiveKindness.ino in Resources */,
 			);
