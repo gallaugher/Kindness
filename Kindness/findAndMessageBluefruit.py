@@ -1,7 +1,5 @@
 """
-Demonstration of a Bluefruit BLE Central for Circuit Playground Bluefruit. Connects to the first BLE
-UART peripheral it finds. Sends Bluefruit ColorPackets, read from three accelerometer axis, to the
-peripheral.
+This is run on a Raspberry Pi and connects to a CircuitPlayground Bluefruit, sending an "A"
 """
 
 import time
@@ -12,23 +10,19 @@ from adafruit_ble import BLERadio
 from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
 from adafruit_ble.services.nordic import UARTService
 # from adafruit_bluefruit_connect.packet import Packet
+# from adafruit_bluefruit_connect.color_packet import ColorPacket
 # from adafruit_bluefruit_connect.button_packet import ButtonPacket
 
 ble = BLERadio()
 
 uart_connection = None
-# See if any existing connections are providing UARTService.
-if ble.connected:
-    for connection in ble.connections:
-        if UARTService in connection:
-            uart_connection = connection
-        break
 
 while True:
     if not uart_connection:
         print("Scanning...")
         for adv in ble.start_scan(ProvideServicesAdvertisement, timeout=5):
             print("adv.complete_name = ", adv.complete_name)
+            print("ble.name = ", ble.name)
             if adv.complete_name == "BabyYoda":
                 print("I found BabyYoda!")
             if UARTService in adv.services:
@@ -41,8 +35,16 @@ while True:
         ble.stop_scan()
 
     while uart_connection and uart_connection.connected:
+
+        # color = (255, 254, 253)
+        # print(color)
+        # color_packet = ColorPacket(color)
+
         try:
+            # uart_connection[UARTService].write(color_packet.to_bytes())
+
             # uart_connection[UARTService].write(ButtonPacket.UP)
+            # print("I just sent an 'UP'!")
             uart_connection[UARTService].write(str.encode("A"))
             print("I just sent an 'A'!")
         except OSError:
