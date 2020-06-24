@@ -4,7 +4,9 @@ import busio
 from adafruit_ble import BLERadio
 from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
 from adafruit_ble.services.nordic import UARTService
-
+from adafruit_bluefruit_connect.packet import Packet
+from adafruit_bluefruit_connect.button_packet import ButtonPacket
+from adafruit_bluefruit_connect.color_packet import ColorPacket
 
 # this flashes a light attached to D18 on a Raspberry Pi
 # whenever a user presses this user's name on the app.
@@ -45,6 +47,8 @@ def connect_to_bluetooth_device():
                     print("ble.complete_name = ", ble.name)
                     break
             # Stop scanning whether or not we are connected.
+            print("About to stop scan!")
+            sending_to_CPB = False
             ble.stop_scan()
 
 # callbacks
@@ -56,64 +60,26 @@ def on_connect(client, userdata, flags, rc):
 
 def contact_via_bluetooth():
     global uart_connection
-    """
-    print("arrived in contact_via_bluetooth()")
-    sending_to_CPB = True
-    while sending_to_CPB:
-        print("Inside while sending_to_CPB:")
-        global uart_connection
-        print("uart_connection = ", uart_connection)
-        if not uart_connection:
-            print("Scanning...")
-            for adv in ble.start_scan(ProvideServicesAdvertisement, timeout=5):
-                print("adv.complete_name = ", adv.complete_name)
-                print("ble.name = ", ble.name)
-                if adv.complete_name == "BabyYoda":
-                    print("I found BabyYoda!")
-                if UARTService in adv.services:
-                    print("found a UARTService advertisement")
-                    uart_connection = ble.connect(adv)
-                    print("adv.complete_name = ", adv.complete_name)
-                    print("ble.complete_name = ", ble.name)
-                    break
-            # Stop scanning whether or not we are connected.
-            ble.stop_scan()
-        """
-    while uart_connection and uart_connection.connected:
+    print("I'm inside contact_via_bluetooth()!")
+    print("uart_connection = ", uart_connection)
+    print("uart_connection.connected = ", uart_connection.connected)
+    # while uart_connection and uart_connection.connected:
+    sent = False
+    while uart_connection.connected and sent == False:
         print("connected!")
+        color = (255, 254, 253)
+        
+        color_packet = ColorPacket(color)
         try:
-            uart_connection[UARTService].write(str.encode("A"))
-            print("I just sent an 'A'!")
+            print("trying to send a color packet!")
+            uart_connection[UARTService].write(color_packet.to_bytes())
+            print("sent a color packet!")
             sending_to_CPB = False
+            sent = True
         except OSError:
+            print("ERROR: I couldn't send an UP")
             pass
         time.sleep(0.3)
-"""
-    print("arrived in contact_via_bluetooth()")
-    sending_to_CPB = True
-    while sending_to_CPB:
-        print("WAITING...")
-        # Advertise when not connected.
-        ble.start_advertising(advertisement)
-        while not ble.connected:
-            pass
-
-        # Connected
-        ble.stop_advertising()
-        print("CONNECTED")
-
-        # Loop and read packets
-        while ble.connected:
-
-            # Keeping trying until a good packet is received
-            try:
-                packet = Packet.from_stream(uart_server)
-                print("Just sent packet to CPB")
-                sending_to_CPB = False
-                
-            except ValueError:
-                continue
-                """
 
 def on_message(client, userdata, msg):
     print("received payload!", str(msg.payload))
