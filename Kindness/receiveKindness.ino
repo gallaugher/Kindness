@@ -41,7 +41,7 @@ MqttClient mqttClient(wifi);
 // details for MQTT client:
 char broker[] = "broker.shiftr.io";
 int port = 1883;
-char topic[] = "A0mrv2xLUFd5ZgDfdZy2M0RrpCJ2";
+char topic[] = "YOUR_UNIQUE_GOOGLE_UID_HERE";
 char clientID[] = "ledClient";
 
 // number value of incoming message that will light the LED:

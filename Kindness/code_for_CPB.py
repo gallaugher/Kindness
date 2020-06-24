@@ -1,6 +1,3 @@
-# run this on a cpb. Current version will play sound
-# and rainbow swirl when it receives a Button.UP
-
 from adafruit_circuitplayground import cp
 from adafruit_ble import BLERadio
 from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
@@ -25,9 +22,10 @@ from adafruit_bluefruit_connect.color_packet import ColorPacket
 import time
 
 ble = BLERadio()
+uart_service = UARTService()
 ble.name = "BabyYoda"
-uart_server = UARTService()
-advertisement = ProvideServicesAdvertisement(uart_server)
+# uart_server = UARTService()
+advertisement = ProvideServicesAdvertisement(uart_service)
 advertisement.complete_name = "BabyYoda"
 
 RainbowStripeColors = [
@@ -80,27 +78,25 @@ while True:
     while not ble.connected:
         pass
 
-    # Now we're connected
     while ble.connected:
         print("CONNECTED!")
-
         
-        """
-        # uart = connection[UARTService]
         # Check for incoming message
+        connection = ble.connections[0]
+        uart = connection[UARTService]
         incoming_bytes = uart.in_waiting
         if incoming_bytes:
             bytes_in = uart.read(incoming_bytes)
             print("Received: ", bytes_in)
             in_label.text = in_label.text[incoming_bytes:] + bytes_in.decode()
-        """
+        
         # Keeping trying until a good packet is received
         try:
             packet = Packet.from_stream(uart_server)
             print("Got a packet!", packet)
         except ValueError:
             continue
-        
+
         if isinstance(packet, ColorPacket):
                 print(packet.color)
                 cp.pixels.fill((packet.color))

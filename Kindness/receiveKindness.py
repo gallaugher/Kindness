@@ -16,7 +16,7 @@ def on_connect(client, userdata, flags, rc):
     print("Connected with Code: " + str(rc))
     # subscribe topic
     # client.subscribe("kindness/itpcamp/")
-    client.subscribe("xPra5ICM8Fh2wwcfVxiyAf2zK3D2")
+    client.subscribe("YOUR_UNIQUE_GOOGLE_UID_HERE")
 
 def on_message(client, userdata, msg):
     print(str(msg.payload))
