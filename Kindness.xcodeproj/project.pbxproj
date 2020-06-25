@@ -29,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		3E0B278F24A2E5EF00E8E656 /* code_for_CPB.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = code_for_CPB.py; sourceTree = "<group>"; };
+		3E0B279124A4363600E8E656 /* Kindness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kindness.entitlements; sourceTree = "<group>"; };
+		3E0B279224A45F1A00E8E656 /* arduino_secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arduino_secrets.h; sourceTree = "<group>"; };
 		3E2FFBD724A01239002900D3 /* UIViewController+alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		3EB0FDB724A1814500A92C4A /* receiveKindness.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = receiveKindness.py; sourceTree = "<group>"; };
 		3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = receiveKindness.ino; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		3EF00D7A24A0052D000BE3E2 /* Kindness */ = {
 			isa = PBXGroup;
 			children = (
+				3E0B279124A4363600E8E656 /* Kindness.entitlements */,
 				3EF00D7B24A0052D000BE3E2 /* AppDelegate.swift */,
 				3EF00D7D24A0052D000BE3E2 /* SceneDelegate.swift */,
 				3EEBEF4024A112B3007E2749 /* KindUser.swift */,
@@ -111,6 +114,7 @@
 				3EE3473224A2883F00809AC6 /* findAndMessageBluefruit.py */,
 				3E0B278F24A2E5EF00E8E656 /* code_for_CPB.py */,
 				3EB0FDBA24A181F100A92C4A /* receiveKindness.ino */,
+				3E0B279224A45F1A00E8E656 /* arduino_secrets.h */,
 			);
 			path = Kindness;
 			sourceTree = "<group>";
@@ -415,6 +419,7 @@
 			baseConfigurationReference = AF5ECB874B170904A29786FE /* Pods-Kindness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kindness/Kindness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9937BJYLPH;
 				INFOPLIST_FILE = Kindness/Info.plist;
@@ -434,6 +439,7 @@
 			baseConfigurationReference = 7B8A3ADB7B38678CC7A87328 /* Pods-Kindness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kindness/Kindness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9937BJYLPH;
 				INFOPLIST_FILE = Kindness/Info.plist;
