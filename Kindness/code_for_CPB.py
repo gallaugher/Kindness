@@ -3,10 +3,9 @@ from adafruit_ble import BLERadio
 from adafruit_ble.advertising.standard import ProvideServicesAdvertisement
 from adafruit_ble.services.nordic import UARTService
 from adafruit_bluefruit_connect.packet import Packet
-
 # Only the packet classes that are imported will be known to Packet.
+from adafruit_bluefruit_connect.button_packet import ButtonPacket
 from adafruit_bluefruit_connect.color_packet import ColorPacket
-
 
 import adafruit_fancyled.adafruit_fancyled as fancy
 import adafruit_fancyled.fastled_helpers as helper
@@ -15,16 +14,9 @@ from audiocore import WaveFile
 import board
 import time
 
-# Only the packet classes that are imported will be known to Packet.
-from adafruit_bluefruit_connect.button_packet import ButtonPacket
-from adafruit_bluefruit_connect.color_packet import ColorPacket
-
-import time
-
 ble = BLERadio()
 uart_service = UARTService()
 ble.name = "BabyYoda"
-# uart_server = UARTService()
 advertisement = ProvideServicesAdvertisement(uart_service)
 advertisement.complete_name = "BabyYoda"
 
@@ -80,28 +72,18 @@ while True:
 
     while ble.connected:
         print("CONNECTED!")
-        
-        # Check for incoming message
-        connection = ble.connections[0]
-        uart = connection[UARTService]
-        incoming_bytes = uart.in_waiting
-        if incoming_bytes:
-            bytes_in = uart.read(incoming_bytes)
-            print("Received: ", bytes_in)
-            in_label.text = in_label.text[incoming_bytes:] + bytes_in.decode()
-        
-        # Keeping trying until a good packet is received
         try:
-            packet = Packet.from_stream(uart_server)
-            print("Got a packet!", packet)
+            packet = Packet.from_stream(uart_service)
+            print("I got a packet!", packet)
         except ValueError:
-            continue
+            print("ERROR: no packet")
+            continue # or pass. This will start the next iteration of the loop and try to get a valid packet again.
 
         if isinstance(packet, ColorPacket):
-                print(packet.color)
-                cp.pixels.fill((packet.color))
-                color = packet.color
-                print("color = ", color)
+            print("I just got a ColorPacket!")
+            print(packet.color)
+            playfile("sparkle.wav")
+            cp.pixels.fill(BLACK)
 
         # Only handle button packets
         if isinstance(packet, ButtonPacket) and packet.pressed:

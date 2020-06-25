@@ -25,6 +25,7 @@ class CommunityListViewController: UIViewController {
         mqttclient.username = "kind-one"
         mqttclient.password = "8e0e6b8813973531"
         mqttclient.connect()
+        navigationController?.navigationItem.title = "Community"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,7 +55,7 @@ extension CommunityListViewController: UITableViewDelegate, UITableViewDataSourc
         UIView.animate(withDuration: 1.0, animations: { cell.textLabel!.alpha = 1.0 })
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 50
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }

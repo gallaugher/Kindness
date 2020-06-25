@@ -10,9 +10,8 @@ import UIKit
 import FirebaseUI
 
 class ProfileViewController: UIViewController {
-    @IBOutlet weak var aboutTextView: UITextView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var profileTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -31,8 +30,12 @@ class ProfileViewController: UIViewController {
             print("😡 ERROR: No user!")
             return
         }
-        configureUserInterface(user: user)
-        self.navigationItem.title = "Profile"
+        if kindUser == nil {
+            kindUser = KindUser(user: user)
+        }
+        kindUser.loadData {
+            self.updateUserInterface()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,11 +44,37 @@ class ProfileViewController: UIViewController {
         self.navigationItem.titleView?.largeContentTitle = "Profile"
     }
     
-    func configureUserInterface(user: User) {
-        emailTextField.text = user.email
-        profileTextField.text = user.displayName
-        topics.append(user.uid)
+    func updateUserInterface() {
+        emailLabel.text = kindUser.email
+        profileTextField.text = kindUser.displayName
+        descriptionTextView.text = kindUser.description
+        topics.append(kindUser.documentID)
         tableView.reloadData()
+    }
+    
+    func updateFromInterface() {
+        kindUser.displayName = profileTextField.text!
+        kindUser.description = descriptionTextView.text!
+    }
+    
+    func leaveViewController() {
+        let isPresentingInAddMode = presentingViewController is UINavigationController
+        if isPresentingInAddMode {
+            dismiss(animated: true, completion: nil)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        updateFromInterface()
+        kindUser.saveData { (success) in
+            if success {
+                self.leaveViewController()
+            } else {
+                self.oneButtonAlert(title: "Save Failed", message: "For some reason, the data would not save to the cloud.")
+            }
+        }
     }
     
 }
@@ -70,5 +99,5 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.alpha = 0.0
         UIView.animate(withDuration: 1.0, animations: { cell.textLabel!.alpha = 1.0 })
     }
-    
+
 }

@@ -57,7 +57,9 @@ class LoginViewController: UIViewController {
         if segue.identifier == "FirstShowSegue" {
             if let user = authUI.auth?.currentUser {
                 let tabBarController = segue.destination as! UITabBarController
-                let destination = tabBarController.viewControllers?.first as! CommunityListViewController
+                // let destination = tabBarController.viewControllers?.first as! CommunityListViewController
+                let destinationNavigationController = tabBarController.viewControllers?.first as! UINavigationController
+                let destination = destinationNavigationController.topViewController as! CommunityListViewController
                 destination.userID = user.uid
             }
         }
